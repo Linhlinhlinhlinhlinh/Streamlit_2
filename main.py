@@ -11,3 +11,4 @@ if s == True:
     p.progress(i+1)
     time.sleep(0.1)
   st.balloons()
+  st.snow()
