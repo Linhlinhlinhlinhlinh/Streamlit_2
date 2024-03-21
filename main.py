@@ -10,5 +10,5 @@ if s == True:
   for i in range(100):
     p.progress(i+1)
     time.sleep(0.1)
-  st.balloons()
   st.snow()
+  st.empty()
