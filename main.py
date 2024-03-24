@@ -14,5 +14,25 @@ if s == True:
     st.snow()
     st.empty()
     st.title('Chào mừng em đến với bảng thống kê điểm!')
+    toan = st.text_input('Nhập điểm toán:')
+    van = st.text_input('Nhập điểm văn:')
+    anh = st.text_input('Nhập điểm anh:')    def avg(toan, van, anh):
+    if not (toan.isdigit() and van.isdigit() and anh.isdigit()):
+      return None
+    toan = float(toan)
+    van = float(van)
+    anh = float(anh)
+    diem_trung_binh = (toan + van + anh) / 3
+    return diem_trung_binh
+    if toan != '' and van != '' and anh != '':
+      average = avg(toan, van, anh)
+      if average is not None:
+        st.success(f"Điểm trung bình của bạn là: {average:.2f}")
+          else:
+            st.error("Vui lòng nhập điểm hợp lệ (số)")
+        else:
+          st.warning('Vui lòng nhập đủ thông tin điểm.')
+      else: 
+        st.warning('Vui lòng nhập đầy đủ thông tin.')
   else: 
     st.warning('Vui lòng nhập đầy đủ thông tin')
