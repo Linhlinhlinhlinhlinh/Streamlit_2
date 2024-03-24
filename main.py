@@ -29,11 +29,11 @@ if s == True:
         average = avg(toan, van, anh)
         if average is not None:
           st.success(f"Điểm trung bình của bạn là: {average:.2f}")
-            else:
-              st.error("Vui lòng nhập điểm hợp lệ (số)")
-          else:
-            st.warning('Vui lòng nhập đủ thông tin điểm.')
-        else: 
-          st.warning('Vui lòng nhập đầy đủ thông tin.')
+        else:
+          st.error("Vui lòng nhập điểm hợp lệ (số)")
+      else:
+        st.warning('Vui lòng nhập đủ thông tin điểm.')
+    else: 
+      st.warning('Vui lòng nhập đầy đủ thông tin.')
   else: 
     st.warning('Vui lòng nhập đầy đủ thông tin')
